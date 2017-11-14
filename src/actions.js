@@ -17,9 +17,9 @@ export const submitGuesses = guess => ({
 	guess
 });
 
-export const INFO_MODAL = 'INFO_MODAL';
-export const infoModal = () => ({
-	type: INFO_MODAL
+export const TOGGLE_MODAL = 'TOGGLE_MODAL';
+export const toggleModal = () => ({
+	type: TOGGLE_MODAL
 });
 
 export const UPDATE_FEEDBACK = 'UPDATE_FEEDBACK';

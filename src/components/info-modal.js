@@ -1,18 +1,20 @@
 import React from 'react';
-
+import {toggleModal} from '../actions';
 import './info-modal.css';
+import {connect} from 'react-redux';
+import store from '../store'
 
-export default class InfoModal extends React.Component {
-    onClose(event) {
-        event.preventDefault();
-        if (this.props.onClose) {
-            this.props.onClose();
-        }
+
+
+export class InfoModal extends React.Component {
+    onInfoClick(event) {
+        event.preventDefault;
+        store.dispatch(toggleModal());
     }
-
     render() {
+        let classList = this.props.modalOpen ? 'overlay' : 'overlay hide'
         return (
-            <div className="overlay" id="modal">
+            <div className={classList} id="modal">
                 <div className="content">
                     <h3>What do I do?</h3>
                     <div>
@@ -23,10 +25,16 @@ export default class InfoModal extends React.Component {
                             <li>3. You will <strong>get feedback</strong> on how close ("hot") or far ("cold") your guess is.</li>
                         </ul>
                         <p>So, Are you ready?</p>
-                        <a className="close" href="#" onClick={e => this.onClose(e)}>Got It!</a>
+                        <a className="close" href="#" onClick={e => this.onInfoClick(e)}>Got It!</a>
                     </div>
                 </div>
             </div>
         );
     }
 }
+
+const mapStateToProps = state => ({
+    modalOpen: state.modalOpen
+})
+
+export default connect(mapStateToProps)(InfoModal);
