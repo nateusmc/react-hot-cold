@@ -17,7 +17,7 @@ store.dispatch(submitGuesses(99));
 // console.log(store.getState());
 // store.dispatch(infoModal());
 // console.log(store.getState());
-// store.dispatch(updateFeedback(32));
+store.dispatch(updateFeedback());
 // console.log(store.getState());
 // store.dispatch(newGame());
 // console.log(store.getState());
