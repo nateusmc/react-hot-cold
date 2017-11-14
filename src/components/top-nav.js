@@ -3,12 +3,11 @@ import React from 'react';
 import './top-nav.css';
 import {connect} from 'react-redux';
 import store from '../store';
-import {newGame, infoModal} from '../actions';
+import {newGame, toggleModal} from '../actions';
 
 const onInfoClick = event => {
     event.preventDefault;
-    store.dispatch(infoModal());
-    console.log(store.getState());
+    store.dispatch(toggleModal());
 }
 
 export class TopNav extends React.Component {

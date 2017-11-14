@@ -1,6 +1,6 @@
 import {createStore} from 'redux';
 import reducer from './reducer';
-import {newGame, submitGuesses, infoModal, updateFeedback} from './actions';
+import {newGame, submitGuesses, toggleModal, updateFeedback} from './actions';
 
 const initialState = {
 	guesses: [],
@@ -8,16 +8,5 @@ const initialState = {
 	correctAnswer: Math.floor(Math.random() * 100) + 1,
 	modalOpen: false
 };
-let store = createStore(reducer, initialState);
+let store = createStore(reducer, initialState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 export default store;
-
-store.dispatch(submitGuesses(32));
-store.dispatch(submitGuesses(81));
-store.dispatch(submitGuesses(99));
-// console.log(store.getState());
-// store.dispatch(infoModal());
-// console.log(store.getState());
-store.dispatch(updateFeedback());
-// console.log(store.getState());
-// store.dispatch(newGame());
-console.log(store.getState());

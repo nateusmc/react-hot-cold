@@ -72,3 +72,11 @@
 	margin-bottom: 50px;
 	border-radius: 3px;
 }
+
+.show {
+display: block;
+}
+
+.hide {
+	display: none;
+}
