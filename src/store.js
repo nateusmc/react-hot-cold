@@ -20,4 +20,4 @@ store.dispatch(submitGuesses(99));
 store.dispatch(updateFeedback());
 // console.log(store.getState());
 // store.dispatch(newGame());
-// console.log(store.getState());
+console.log(store.getState());

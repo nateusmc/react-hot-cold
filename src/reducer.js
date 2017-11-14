@@ -14,7 +14,7 @@ export default (state, action) => {
 		});
 	} else if (action.type === 'INFO_MODAL') {
 		return Object.assign({}, state, {
-			modalOpen: !state.modelOpen
+			modalOpen: !state.modalOpen
 		});
 	} else if (action.type === 'UPDATE_FEEDBACK') {
 		let currentGuess = state.guesses.slice(-1)[0];
