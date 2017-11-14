@@ -49,3 +49,8 @@ ul li {
 	display: inline;
 }
 
+.form-body {
+	background-color: #3b4870;
+	width: 400px;
+	margin: auto;
+}

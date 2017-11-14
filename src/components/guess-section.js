@@ -7,8 +7,10 @@ import {connect} from 'react-redux';
 export function GuessSection(props) {
     return (
         <section>
-            <h2 id="feedback">{props.feedback}</h2>
-            <GuessForm />
+            <div className="form-body">
+                <h2 id="feedback">{props.feedback}</h2>
+                <GuessForm />
+            </div>
         </section>
     );
 }

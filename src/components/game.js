@@ -11,9 +11,11 @@ export default class Game extends React.Component {
         return (
             <div>
                 <Header/>
-                <GuessSection/>
-                <GuessCount/>
-                <GuessList/>
+                <div className="form-body">
+                    <GuessSection/>
+                    <GuessCount/>
+                    <GuessList/>
+                </div>
                 <InfoModal/>
             </div>
         );
